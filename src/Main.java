@@ -1,12 +1,11 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import Days.Day1;
+import Days.Day2;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        Day1 day1 = new Day1();
 
         do {
             Scanner sc = new Scanner(System.in);
@@ -19,7 +18,12 @@ public class Main {
                         System.out.println("Exiting...");
                         System.exit(0);
                     case 1:
+                        Day1 day1 = new Day1();
                         day1.run();
+                        break;
+                    case 2:
+                        Day2 day2 = new Day2();
+                        day2.run();
                         break;
                     default:
                         System.out.println("Invalid day number");
