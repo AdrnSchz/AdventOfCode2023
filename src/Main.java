@@ -1,6 +1,7 @@
 import Days.Day1;
 import Days.Day2;
 import Days.Day3;
+import Days.Day4;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -29,6 +30,10 @@ public class Main {
                     case 3:
                         Day3 day3 = new Day3();
                         day3.run();
+                        break;
+                    case 4:
+                        Day4 day4 = new Day4();
+                        day4.run();
                         break;
                     default:
                         System.out.println("Invalid day number");
