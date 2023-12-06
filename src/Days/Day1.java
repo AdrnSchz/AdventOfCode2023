@@ -60,8 +60,6 @@ public class Day1 {
                     num = (first - '0') * 10 + (last - '0');
                 }
                 total += num;
-                //System.out.println(line);
-                //System.out.println(num);
                 line = reader.readLine();
             }
             System.out.println("Total: " + total);

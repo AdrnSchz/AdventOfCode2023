@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Day4 {
 
-    class Card {
+    static class Card {
         int id;
         String[] numbers;
         String[] winning;
@@ -29,14 +29,14 @@ public class Day4 {
 
     private void part1(List<Card > cards) {
         int total = 0;
-        for (int i = 0; i < cards.size(); i++) {
+        for (Card card : cards) {
             int points = 0;
 
-            for (int j = 0; j < cards.get(i).numbers.length; j++) {
-                for (int k = 0; k < cards.get(i).winning.length; k++) {
-                    if (cards.get(i).numbers[j].equals("")) break;
-                    if (cards.get(i).winning[k].equals("")) continue;
-                    if (cards.get(i).numbers[j].equals(cards.get(i).winning[k])) {
+            for (int j = 0; j < card.numbers.length; j++) {
+                for (int k = 0; k < card.winning.length; k++) {
+                    if (card.numbers[j].equals("")) break;
+                    if (card.winning[k].equals("")) continue;
+                    if (card.numbers[j].equals(card.winning[k])) {
                         if (points == 0) points = 1;
                         else points *= 2;
                         break;
