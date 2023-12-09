@@ -97,10 +97,6 @@ public class Day7 {
         }
 
         System.out.println("Part 2: " + total);
-
-        for (int i = hands.size() -1; i >= 0; i--) {
-            System.out.println(hands.get(i).getCardsOg() + " " + hands.get(i).getBid());
-        }
     }
 
     private int getOccurrences(Hand hand, char c) {
