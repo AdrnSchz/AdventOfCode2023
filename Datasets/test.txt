@@ -1,33 +1,20 @@
-seeds: 79 14 55 13
-
-seed-to-soil map:
-50 98 2
-52 50 48
-
-soil-to-fertilizer map:
-0 15 37
-37 52 2
-39 0 15
-
-fertilizer-to-water map:
-49 53 8
-0 11 42
-42 0 7
-57 7 4
-
-water-to-light map:
-88 18 7
-18 25 70
-
-light-to-temperature map:
-45 77 23
-81 45 19
-68 64 13
-
-temperature-to-humidity map:
-0 69 1
-1 0 69
-
-humidity-to-location map:
-60 56 37
-56 93 4
+49A49 734
+67594 467
+Q2429 453
+3J787 359
+K4824 703
+29992 804
+94JQK 988
+2TQT5 765
+7TQ3T 710
+J4389 979
+96J56 271
+JTTJT 488
+7QA5J 306
+Q72Q2 163
+A666A 759
+2779T 566
+A777Q 136
+TJ277 365
+QQ339 388
+KA22K 31

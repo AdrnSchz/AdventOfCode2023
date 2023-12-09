@@ -39,6 +39,10 @@ public class Main {
                         Day6 day6 = new Day6();
                         day6.run();
                         break;
+                    case 7:
+                        Day7 day7 = new Day7();
+                        day7.run();
+                        break;
                     default:
                         System.out.println("Invalid day number");
                 }

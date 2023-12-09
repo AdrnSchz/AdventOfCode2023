@@ -68,10 +68,10 @@ public class Day5 {
         getDataPart1(data);
         long lowestLocation = Long.MAX_VALUE;
         long seed = 0;
-        for (int i = 0; i < data.size(); i++) {
-            if (data.get(i).getLocation() < lowestLocation) {
-                lowestLocation = data.get(i).getLocation();
-                seed = data.get(i).getSeed();
+        for (Info datum : data) {
+            if (datum.getLocation() < lowestLocation) {
+                lowestLocation = datum.getLocation();
+                seed = datum.getSeed();
             }
             //printData(data.get(i));
         }
@@ -85,10 +85,10 @@ public class Day5 {
         getDataPart2(data);
         long lowestLocation = Long.MAX_VALUE;
         long seed = 0;
-        for (int i = 0; i < data.size(); i++) {
-            if (data.get(i).getLocation() < lowestLocation) {
-                lowestLocation = data.get(i).getLocation();
-                seed = data.get(i).getSeed();
+        for (Info datum : data) {
+            if (datum.getLocation() < lowestLocation) {
+                lowestLocation = datum.getLocation();
+                seed = datum.getSeed();
             }
             //printData(data.get(i));
         }
@@ -105,8 +105,8 @@ public class Day5 {
             String[] numbers = separate[1].split("\\s+");
 
 
-            for (int i = 0; i < numbers.length; i++) {
-                Info info = new Info(Long.parseLong(numbers[i]));
+            for (String number : numbers) {
+                Info info = new Info(Long.parseLong(number));
                 data.add(info);
             }
             reader.readLine();
@@ -162,27 +162,10 @@ public class Day5 {
                 while (line != null && !line.equals("")) {
                     map = mapCategory(line);
 
-                    if (category.equals("seed-to-soil map:")) {
-                        for (int i = 0; i < data.size(); i++) {
-                            long source = data.get(i).getSeed();
-                            long range = data.get(i).getRange();
-                            if (source >= map[1] && source < map[1] + map[2]) {
-                                setDestination(data, i, category, map[0] + (source - map[1]));
-                            }
-                            else if (source >= map[1] + map[2] && source < map[1] + map[2] + range) {
-                                setDestination(data, i, category, map[0] + (source - map[1] - map[2]));
-                            }
-                            if (source >= map[1] && source < map[1] + map[2]) {
-                                setDestination(data, i, category, map[0] + (source - map[1]));
-                            }
-                        }
-                    }
-                    else {
-                        for (int i = 0; i < data.size(); i++) {
-                            long source = getSource(data, i, category);
-                            if (source >= map[1] && source < map[1] + map[2]) {
-                                setDestination(data, i, category, map[0] + (source - map[1]));
-                            }
+                    for (int i = 0; i < data.size(); i++) {
+                        long source = getSource(data, i, category);
+                        if (source >= map[1] && source < map[1] + map[2]) {
+                            setDestination(data, i, category, map[0] + (source - map[1]));
                         }
                     }
                     line = reader.readLine();
